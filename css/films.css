@@ -1,0 +1,121 @@
+.films {
+  padding: 60px 0 76px;
+}
+
+.films__wrap {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(255px, 1fr));
+  gap: 30px;
+  grid-auto-rows: 366px;
+}
+
+.films__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+  justify-content: space-between;
+  padding: 54px 15px 18px;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.films__card:nth-child(1) {
+  background: url(../img/film1.png) no-repeat top center/cover;
+}
+.films__card:nth-child(2) {
+  background: url(../img/film2.png) no-repeat top center/cover;
+}
+.films__card:nth-child(3) {
+  background: url(../img/film3.png) no-repeat top center/cover;
+}
+.films__card:nth-child(4) {
+  background: url(../img/film4.png) no-repeat top center/cover;
+}
+
+.films__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(241, 129, 40, 0.35) 0%,
+    rgba(0, 0, 0, 0.71) 51.04%,
+    rgba(7, 15, 25, 0.8) 100%
+  );
+}
+
+.films__card-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.films__card-top_item {
+  font-size: 40px;
+  color: var(--white);
+}
+
+.films__card-top_time {
+  padding: 6px 28px;
+  border: 1px solid #fff;
+  background: #070f1933;
+  border-radius: 10px;
+  font-family: var(--MR);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 10px;
+  color: var(--white);
+}
+
+.films__card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.films__card-bottom_h {
+  font-family: var(--MR);
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.films__card-bottom_p {
+  font-family: var(--RR);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--white);
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1140px) {
+  .films__wrap {
+    grid-template-columns: repeat(2, minmax(255px, 1fr));
+  }
+}
+@media screen and (max-width: 568px) {
+  .films__wrap {
+    grid-template-columns: 255px;
+    justify-content: center;
+  }
+}
+
+
